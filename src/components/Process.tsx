@@ -8,9 +8,9 @@ export default function Process() {
           <h2>So arbeiten wir mit Ihnen.</h2>
           <span className="counter mono">02</span>
         </div>
-        <div className="process-list reveal">
+        <div className="process-list">
           {processSteps.map((step) => (
-            <div className="process-step" key={step.id}>
+            <div className="process-step reveal" key={step.id}>
               <span className="step-id mono">{step.id}</span>
               <h3>{step.title}</h3>
               <p>{step.description}</p>

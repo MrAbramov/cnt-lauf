@@ -9,8 +9,8 @@ export default function Pricing() {
           <span className="counter mono">03</span>
         </div>
 
-        <div className="price-top reveal">
-          <div className="price-card">
+        <div className="price-top">
+          <div className="price-card reveal">
             <span className="switch-dot" />
             <span className="label mono">Privatkunden</span>
             <div className="amount">
@@ -18,7 +18,7 @@ export default function Pricing() {
             </div>
             <p className="fine">20,00 € je angefangener Viertelstunde</p>
           </div>
-          <div className="price-card">
+          <div className="price-card reveal">
             <span className="switch-dot" />
             <span className="label mono">Geschäftskunden</span>
             <div className="amount">
@@ -28,9 +28,9 @@ export default function Pricing() {
           </div>
         </div>
 
-        <div className="price-details reveal">
+        <div className="price-details">
           {priceRows.map((row) => (
-            <div className="price-row" key={row.label}>
+            <div className="price-row reveal" key={row.label}>
               <span className="row-label">{row.label}</span>
               <span className="row-fill" />
               <span className="row-value">{row.value}</span>

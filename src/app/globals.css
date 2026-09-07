@@ -1246,14 +1246,58 @@ footer {
 @media (prefers-reduced-motion: no-preference) {
   .reveal {
     opacity: 0;
-    transform: translateY(14px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .reveal.is-visible {
     opacity: 1;
     transform: none;
   }
+
+  /* .service-card already animates border-color/background on hover; this
+     combined rule keeps both that and the reveal fade working together,
+     since a shorthand `transition` on the same element can't come from
+     two separate rules at once. */
+  .service-card.reveal {
+    transition: border-color 0.2s ease, background 0.2s ease,
+      opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Cascading stagger for repeating groups */
+  .hero-content > .reveal:nth-child(1) { transition-delay: 0.05s; }
+  .hero-content > .reveal:nth-child(2) { transition-delay: 0.15s; }
+  .hero-content > .reveal:nth-child(3) { transition-delay: 0.25s; }
+  .hero-content > .reveal:nth-child(4) { transition-delay: 0.35s; }
+  .hero-content > .reveal:nth-child(5) { transition-delay: 0.45s; }
+  .hero-visual.reveal { transition-delay: 0.2s; }
+
+  .service-grid > .reveal:nth-child(3n + 1) { transition-delay: 0.05s; }
+  .service-grid > .reveal:nth-child(3n + 2) { transition-delay: 0.12s; }
+  .service-grid > .reveal:nth-child(3n) { transition-delay: 0.19s; }
+
+  .process-list > .reveal:nth-child(1) { transition-delay: 0.03s; }
+  .process-list > .reveal:nth-child(2) { transition-delay: 0.1s; }
+  .process-list > .reveal:nth-child(3) { transition-delay: 0.17s; }
+  .process-list > .reveal:nth-child(4) { transition-delay: 0.24s; }
+
+  .price-top > .reveal:nth-child(1) { transition-delay: 0.03s; }
+  .price-top > .reveal:nth-child(2) { transition-delay: 0.12s; }
+
+  .price-details > .reveal:nth-child(1) { transition-delay: 0.02s; }
+  .price-details > .reveal:nth-child(2) { transition-delay: 0.06s; }
+  .price-details > .reveal:nth-child(3) { transition-delay: 0.1s; }
+  .price-details > .reveal:nth-child(4) { transition-delay: 0.14s; }
+  .price-details > .reveal:nth-child(5) { transition-delay: 0.18s; }
+  .price-details > .reveal:nth-child(6) { transition-delay: 0.22s; }
+
+  .cert-badges > .reveal:nth-child(1) { transition-delay: 0.03s; }
+  .cert-badges > .reveal:nth-child(2) { transition-delay: 0.11s; }
+  .cert-badges > .reveal:nth-child(3) { transition-delay: 0.19s; }
+
+  .cert-stats > .reveal:nth-child(1) { transition-delay: 0.03s; }
+  .cert-stats > .reveal:nth-child(2) { transition-delay: 0.11s; }
+  .cert-stats > .reveal:nth-child(3) { transition-delay: 0.19s; }
 }
 
 .skip-link {

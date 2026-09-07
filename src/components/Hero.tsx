@@ -8,18 +8,18 @@ export default function Hero() {
       <div className="hero-grid-bg" aria-hidden="true" />
       <div className="container hero-inner">
         <div className="hero-content">
-          <p className="eyebrow">
+          <p className="eyebrow reveal">
             <span className="switch-dot" />
             Grazer Str. 3 · 91207 Lauf · seit 2010
           </p>
-          <h1>
+          <h1 className="reveal">
             Ihr IT-Partner für alles, was <strong>verbunden</strong> sein muss.
           </h1>
-          <p className="hero-sub">
+          <p className="hero-sub reveal">
             Ob privater Haushalt oder kleines Unternehmen: Wir richten Computer, Netzwerke, Cloud und
             Sicherheit so ein, dass sie einfach funktionieren.
           </p>
-          <div className="hero-actions">
+          <div className="hero-actions reveal">
             <a className="btn btn-filled" href="mailto:info@cnt-lauf.de">
               Termin anfragen
             </a>
@@ -27,7 +27,7 @@ export default function Hero() {
               Leistungen ansehen
             </a>
           </div>
-          <div className="hero-meta">
+          <div className="hero-meta reveal">
             <span>
               <strong>9</strong> Leistungsfelder
             </span>
@@ -40,7 +40,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero-visual">
+        <div className="hero-visual reveal">
           <SystemMonitor />
         </div>
       </div>
